@@ -156,6 +156,7 @@ take_category.addEventListener("click", (event) => {
 
 
     } else if (event.target.innerHTML === "Flick") {
+        take_burger_opt.style.display = "none"
         take_burger_opt.style.left = "100%"
         take_turns = 0
         take_btn.style.backgroundColor = "white"
