@@ -3,10 +3,11 @@ html body {
     background-color: rgb(44, 44, 44);
     font-style: normal;
     overflow-x: hidden;
-    height: 100vh;
 
+}
 
-
+body {
+    overflow-x: hidden;
 }
 
 body,
@@ -14,14 +15,15 @@ html {
     overflow-x: hidden;
 }
 
+main, .container, #Child {
+  overflow-x: hidden;
+}
+
 * {
 
     font-family: "Montserrat", serif;
     font-optical-sizing: auto;
     color: white;
-
-
-
 
 }
 
@@ -36,7 +38,6 @@ form input {
     display: none;
 }
 
-
 #imagePreview {
     width: 500px;
     height: 300px;
@@ -47,22 +48,22 @@ form input {
 
 #top_nav {
 
+    background-color: rgb(44, 44, 44);
     display: flex;
+    position: sticky;
+    z-index: 10;
+    top: 0;
     justify-content: center;
     align-items: center;
     height: 10%;
     justify-content: space-between;
     padding: 2%;
 
-
-
 }
 
 .container {
 
     padding-top: 3%;
-
-
 
 }
 
@@ -89,17 +90,14 @@ form input {
 #menu_burger_opt {
 
     position: absolute;
-    background-color: black;
-    width: 70%;
-    height: 100%;
     display: none;
-    z-index: 1;
-    margin-left: 30%;
+    padding: 15% 0% 1% 1%;
+    background-color: black;
+    width: 100%;
+    height: 120vh;
+    left: 130%;
+    z-index: 20;
     transition: 300ms;
-    padding-top: 3%;
-    -webkit-box-shadow: -50px -9px 300px 12px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: -50px -9px 300px 12px rgba(0, 0, 0, 0.75);
-    box-shadow: -120px -9px 00px 12px rgba(0, 0, 0, 0.45);
     border-left: 1px solid white;
     overflow: auto;
 
@@ -107,9 +105,11 @@ form input {
 
 #menu_burger_opt img {
 
-    margin-top: 90%;
-    position: absolute;
-    left: 12%;
+
+    position: relative;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, 50%);
 }
 
 #menu_burger_opt h2 {
@@ -120,8 +120,9 @@ form input {
 
 #menu_burger_opt li {
 
-    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
     padding: 5%;
+    cursor: pointer;
 
 }
 
@@ -139,7 +140,7 @@ form input {
 
 }
 
-#icons input{
+#icons input {
     background-color: aqua;
 }
 
@@ -151,10 +152,7 @@ form input {
 
     100% {
         transform: translate(0%);
-
-
     }
-
 }
 
 #sub-title {
@@ -169,18 +167,21 @@ form #icons {
     display: flex;
     justify-content: space-around;
 
+
 }
 
 #tuka_slika {
 
     position: relative;
-
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 100px;
+    height: 10%;
+    flex-direction: column;
+}
 
-
+#tuka_slika h2 {
+    margin-bottom: 10%;
 }
 
 #hey h1 {
@@ -215,10 +216,13 @@ form #icons {
 
 }
 
+#imagePreview {
+    border: white solid 1px;
+}
+
 #plus_minus button {
 
     position: relative;
-
     margin-LEFT: 30%;
     width: 40%;
     height: 160px;
@@ -226,8 +230,6 @@ form #icons {
     border: none;
     transition: 500ms;
     opacity: 100%;
-
-
 
 }
 
@@ -240,8 +242,6 @@ form #icons {
 footer {
 
     height: 5vh;
-    margin-top: 51.5%;
-
     background-color: black;
     display: flex;
     justify-content: center;
@@ -251,7 +251,7 @@ footer {
 
 footer h6 {
 
-    opacity: 15%;
+    opacity: 60%;
 
 }
 
@@ -289,7 +289,8 @@ footer h6 {
 
 }
 
-@media (max-width: 764px) {
+
+@media (max-width: 768px) {
     #top_nav svg {
         width: 6vw;
         margin-top: -2vw;
@@ -303,4 +304,79 @@ footer h6 {
         padding: 0%;
         border-radius: 10px;
     }
+
+    #menu_burger_opt {
+
+        position: absolute;
+        padding: 25% 0% 1% 1%;
+        background-color: black;
+        width: 100%;
+        height: 100vh;
+        left: 130%;
+        z-index: 1;
+        transition: 300ms;
+        border-left: 1px solid white;
+        overflow: auto;
+
+    }
+}
+
+@media (min-width: 768px) {
+    #plus_minus button {
+        position: relative;
+        width: 40%;
+        margin-left: 0%;
+
+    }
+
+    #plus_minus #miss {
+        position: relative;
+        width: 40%;
+        margin-left: 0%;
+    }
+
+
+    #plus_minus {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 0%;
+        margin-top: 0%;
+        align-items: center;
+        flex-direction: row-reverse;
+    }
+
+    #Child {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 5%;
+        padding: 4%;
+        align-items: center;
+    }
+
+    #tuka_slika {
+        width: 30%;
+
+        margin-bottom: 20%;
+    }
+
+    form {
+        width: 60%;
+    }
+
+    #menu_burger_opt {
+
+        position: absolute;
+        padding: 10% 0% 1% 5%;
+        background-color: black;
+        width: 100%;
+        left: 130%;
+        z-index: 1;
+        transition: 300ms;
+        border-left: 1px solid white;
+        overflow: auto;
+
+    }
+
+
+
 }
