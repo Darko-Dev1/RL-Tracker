@@ -1,0 +1,15 @@
+* {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+}
+
+body {
+  background-color: rgb(44, 44, 44) !important;
+  color: white !important;
+  padding: 5%;
+}
+body h1 {
+  font-weight: 500;
+}
+
+/*# sourceMappingURL=styles.css.map */

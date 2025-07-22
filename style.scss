@@ -1,0 +1,18 @@
+$primaryColor: rgb(44, 44, 44);
+$fontColor: white;
+
+* {
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+}
+
+body {
+    background-color: $primaryColor !important;
+    color: $fontColor !important;
+    padding: 5%;
+
+    h1 {
+        font-weight: 500;
+    }
+
+}

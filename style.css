@@ -126,7 +126,11 @@ form input {
     border-bottom: 1px solid gray;
     padding: 5%;
     cursor: pointer;
+    list-style: none;
 
+}
+li:hover {
+    font-weight: 900;
 }
 
 #icons svg {

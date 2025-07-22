@@ -1,0 +1,24 @@
+{
+  "name": "rl-tracker",
+  "version": "1.0.0",
+  "main": "structure.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Darko-Dev1/RL-Tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Darko-Dev1/RL-Tracker/issues"
+  },
+  "homepage": "https://github.com/Darko-Dev1/RL-Tracker#readme",
+  "description": "",
+  "dependencies": {
+    "sass": "^1.89.2"
+  }
+}
